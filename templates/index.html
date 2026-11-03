@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Oracle AI Chat Assistant</title>
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">AI Assistant</p>
+          <h1>Oracle AI Chat</h1>
+        </div>
+        <span class="status-pill" id="dbStatus">Checking database...</span>
+      </header>
+
+      <main class="chat-panel">
+        <div id="chatMessages" class="messages" aria-live="polite">
+          <div class="message bot">
+            <div class="bubble">
+              Hello! Ask me about Oracle data, table metadata, or general database questions.
+            </div>
+          </div>
+        </div>
+
+        <form id="chatForm" class="composer">
+          <textarea
+            id="messageInput"
+            rows="3"
+            placeholder="Type your message here..."
+            required
+          ></textarea>
+          <button type="submit" id="sendBtn">Send</button>
+        </form>
+      </main>
+    </div>
+
+    <script src="/static/app.js"></script>
+  </body>
+</html>

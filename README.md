@@ -28,6 +28,8 @@ requirements.txt
 1. Create a virtual environment.
 2. Install dependencies:
    ```bash
+   py -3.13 -m venv .venv
+   .\.venv\Scripts\activate
    python -m pip install -r requirements.txt
    ```
 3. Copy `.env.example` to `.env` and update values.
@@ -35,6 +37,7 @@ requirements.txt
    ```bash
    python main.py
    ```
+5. Open the browser at `http://localhost:8000/` to use the chat UI.
 
 ## API example
 ```bash
@@ -44,5 +47,5 @@ curl -X POST http://localhost:8000/api/v1/chat \
 ```
 
 ## Notes
-- Oracle client libraries may need to be installed separately depending on your environment.
-- The project is intentionally set up as a starter backend for a database-connected AI assistant.
+- Oracle support is intentionally optional and is added later when the environment has a compatible Oracle client toolchain.
+- The project includes a lightweight browser UI for testing the AI chat flow before the database connection is wired in.
